@@ -20,15 +20,45 @@
 #   You should have received a copy of the GNU General Public License
 #   along with do-mpc.  If not, see <http://www.gnu.org/licenses/>.
 
-import do_mpc.tools
-import do_mpc.model
-import do_mpc.controller
-import do_mpc.estimator
-import do_mpc.optimizer
-import do_mpc.simulator
-import do_mpc.graphics
+import numpy as np
+import matplotlib.pyplot as plt
+from casadi import *
+from casadi.tools import *
+import pdb
+import sys
+import unittest
+import pickle
 
-import do_mpc.sampling
-import do_mpc.sysid
+from importlib import reload
+import copy
 
-from .version import __version__
+do_mpc_path = '../'
+if not do_mpc_path in sys.path:
+    sys.path.append('../')
+
+import do_mpc
+
+
+
+
+class TestONNX(unittest.TestCase):
+    def setUp(self):
+        """Add path of test case and import the modules.
+        If this test isn't the first to run, the modules need to be reloaded.
+        Reset path afterwards.
+        """
+        pass
+
+    def test_ONNX1(self):
+        print('Testing ONNX1 model')
+        # Load first onnx model
+        # onnx = 
+
+        self.assertTrue(True)
+
+        
+
+
+
+if __name__ == '__main__':
+    unittest.main()
